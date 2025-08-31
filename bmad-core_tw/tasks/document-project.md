@@ -1,32 +1,32 @@
 <!-- Powered by BMAD™ Core -->
 
-# Document an Existing Project
+# 記錄現有專案
 
-## Purpose
+## 目的
 
-Generate comprehensive documentation for existing projects optimized for AI development agents. This task creates structured reference materials that enable AI agents to understand project context, conventions, and patterns for effective contribution to any codebase.
+為現有專案產生針對 AI 開發代理優化的全面文件。此任務創建結構化參考資料，使 AI 代理能夠理解專案上下文、約定和模式，以有效貢獻任何程式碼庫。
 
-## Task Instructions
+## 任務說明
 
-### 1. Initial Project Analysis
+### 1. 初始專案分析
 
-**CRITICAL:** First, check if a PRD or requirements document exists in context. If yes, use it to focus your documentation efforts on relevant areas only.
+**關鍵：** 首先，檢查上下文中是否存在 PRD 或需求文件。如果有，使用它來將您的文件工作重點僅放在相關領域。
 
-**IF PRD EXISTS**:
+**如果 PRD 存在**：
 
-- Review the PRD to understand what enhancement/feature is planned
-- Identify which modules, services, or areas will be affected
-- Focus documentation ONLY on these relevant areas
-- Skip unrelated parts of the codebase to keep docs lean
+- 檢視 PRD 以了解計劃的增強/功能
+- 識別哪些模組、服務或領域將受到影響
+- 僅專注於這些相關領域的文件
+- 跳過程式碼庫的無關部分以保持文件精簡
 
-**IF NO PRD EXISTS**:
-Ask the user:
+**如果沒有 PRD**：
+詢問用戶：
 
-"I notice you haven't provided a PRD or requirements document. To create more focused and useful documentation, I recommend one of these options:
+"我注意到您沒有提供 PRD 或需求文件。為了創建更有針對性和有用的文件，我建議以下選項之一：
 
-1. **Create a PRD first** - Would you like me to help create a brownfield PRD before documenting? This helps focus documentation on relevant areas.
+1. **首先創建 PRD** - 您希望我在記錄之前幫助創建棕地 PRD 嗎？這有助於將文件重點放在相關領域。
 
-2. **Provide existing requirements** - Do you have a requirements document, epic, or feature description you can share?
+2. **提供現有需求** - 您有需求文件、史詩或功能描述可以分享嗎？
 
 3. **Describe the focus** - Can you briefly describe what enhancement or feature you're planning? For example:
    - 'Adding payment processing to the user service'
