@@ -1,136 +1,136 @@
 <!-- Powered by BMAD™ Core -->
 
-# Validate Next Story Task
+# 驗證下一個故事任務
 
-## Purpose
+## 目的
 
-To comprehensively validate a story draft before implementation begins, ensuring it is complete, accurate, and provides sufficient context for successful development. This task identifies issues and gaps that need to be addressed, preventing hallucinations and ensuring implementation readiness.
+在實施開始之前全面驗證故事草稿，確保其完整、準確，並為成功開發提供足夠的上下文。此任務識別需要解決的問題和差距，防止幻覺並確保實施準備就緒。
 
-## SEQUENTIAL Task Execution (Do not proceed until current Task is complete)
+## 順序任務執行（在當前任務完成之前不要繼續）
 
-### 0. Load Core Configuration and Inputs
+### 0. 載入核心配置和輸入
 
-- Load `.bmad-core/core-config.yaml`
-- If the file does not exist, HALT and inform the user: "core-config.yaml not found. This file is required for story validation."
-- Extract key configurations: `devStoryLocation`, `prd.*`, `architecture.*`
-- Identify and load the following inputs:
-  - **Story file**: The drafted story to validate (provided by user or discovered in `devStoryLocation`)
-  - **Parent epic**: The epic containing this story's requirements
-  - **Architecture documents**: Based on configuration (sharded or monolithic)
-  - **Story template**: `bmad-core/templates/story-tmpl.md` for completeness validation
+- 載入 `.bmad-core/core-config.yaml`
+- 如果檔案不存在，停止並告知用戶：「找不到 core-config.yaml。此檔案是故事驗證所必需的。」
+- 提取關鍵配置：`devStoryLocation`、`prd.*`、`architecture.*`
+- 識別並載入以下輸入：
+  - **故事檔案**：要驗證的草稿故事（由用戶提供或在 `devStoryLocation` 中發現）
+  - **父史詩**：包含此故事需求的史詩
+  - **架構文件**：基於配置（分片或單一）
+  - **故事範本**：`bmad-core/templates/story-tmpl.md` 用於完整性驗證
 
-### 1. Template Completeness Validation
+### 1. 範本完整性驗證
 
-- Load `bmad-core/templates/story-tmpl.md` and extract all section headings from the template
-- **Missing sections check**: Compare story sections against template sections to verify all required sections are present
-- **Placeholder validation**: Ensure no template placeholders remain unfilled (e.g., `{{EpicNum}}`, `{{role}}`, `_TBD_`)
-- **Agent section verification**: Confirm all sections from template exist for future agent use
-- **Structure compliance**: Verify story follows template structure and formatting
+- 載入 `bmad-core/templates/story-tmpl.md` 並從範本中提取所有部分標題
+- **缺少部分檢查**：將故事部分與範本部分比較，以驗證所有必需部分都存在
+- **佔位符驗證**：確保沒有範本佔位符保持未填充（例如，`{{EpicNum}}`、`{{role}}`、`_TBD_`）
+- **代理部分驗證**：確認範本中的所有部分都存在以供未來代理使用
+- **結構合規性**：驗證故事遵循範本結構和格式
 
-### 2. File Structure and Source Tree Validation
+### 2. 檔案結構和源樹驗證
 
-- **File paths clarity**: Are new/existing files to be created/modified clearly specified?
-- **Source tree relevance**: Is relevant project structure included in Dev Notes?
-- **Directory structure**: Are new directories/components properly located according to project structure?
-- **File creation sequence**: Do tasks specify where files should be created in logical order?
-- **Path accuracy**: Are file paths consistent with project structure from architecture docs?
+- **檔案路徑清晰度**：要創建/修改的新/現有檔案是否清楚指定？
+- **源樹相關性**：相關專案結構是否包含在 Dev Notes 中？
+- **目錄結構**：新目錄/組件是否根據專案結構正確定位？
+- **檔案創建序列**：任務是否按邏輯順序指定檔案創建位置？
+- **路徑準確性**：檔案路徑是否與架構文件中的專案結構一致？
 
-### 3. UI/Frontend Completeness Validation (if applicable)
+### 3. UI/前端完整性驗證（如適用）
 
-- **Component specifications**: Are UI components sufficiently detailed for implementation?
-- **Styling/design guidance**: Is visual implementation guidance clear?
-- **User interaction flows**: Are UX patterns and behaviors specified?
-- **Responsive/accessibility**: Are these considerations addressed if required?
-- **Integration points**: Are frontend-backend integration points clear?
+- **組件規格**：UI 組件是否足夠詳細以供實施？
+- **樣式/設計指導**：視覺實施指導是否清楚？
+- **用戶互動流程**：UX 模式和行為是否指定？
+- **響應式/可訪問性**：如果需要，這些考慮是否得到解決？
+- **整合點**：前端-後端整合點是否清楚？
 
-### 4. Acceptance Criteria Satisfaction Assessment
+### 4. 驗收標準滿足評估
 
-- **AC coverage**: Will all acceptance criteria be satisfied by the listed tasks?
-- **AC testability**: Are acceptance criteria measurable and verifiable?
-- **Missing scenarios**: Are edge cases or error conditions covered?
-- **Success definition**: Is "done" clearly defined for each AC?
-- **Task-AC mapping**: Are tasks properly linked to specific acceptance criteria?
+- **AC 覆蓋範圍**：列出的任務是否會滿足所有驗收標準？
+- **AC 可測試性**：驗收標準是否可測量和可驗證？
+- **缺少場景**：是否涵蓋邊緣情況或錯誤條件？
+- **成功定義**：每個 AC 的「完成」是否清楚定義？
+- **任務-AC 映射**：任務是否正確連結到特定驗收標準？
 
-### 5. Validation and Testing Instructions Review
+### 5. 驗證和測試說明檢視
 
-- **Test approach clarity**: Are testing methods clearly specified?
-- **Test scenarios**: Are key test cases identified?
-- **Validation steps**: Are acceptance criteria validation steps clear?
-- **Testing tools/frameworks**: Are required testing tools specified?
-- **Test data requirements**: Are test data needs identified?
+- **測試方法清晰度**：測試方法是否清楚指定？
+- **測試場景**：是否識別關鍵測試案例？
+- **驗證步驟**：驗收標準驗證步驟是否清楚？
+- **測試工具/框架**：是否指定所需的測試工具？
+- **測試資料需求**：是否識別測試資料需求？
 
-### 6. Security Considerations Assessment (if applicable)
+### 6. 安全考慮評估（如適用）
 
-- **Security requirements**: Are security needs identified and addressed?
-- **Authentication/authorization**: Are access controls specified?
-- **Data protection**: Are sensitive data handling requirements clear?
-- **Vulnerability prevention**: Are common security issues addressed?
-- **Compliance requirements**: Are regulatory/compliance needs addressed?
+- **安全需求**：是否識別並解決安全需求？
+- **驗證/授權**：是否指定訪問控制？
+- **資料保護**：敏感資料處理需求是否清楚？
+- **漏洞預防**：是否解決常見安全問題？
+- **合規需求**：是否解決法規/合規需求？
 
-### 7. Tasks/Subtasks Sequence Validation
+### 7. 任務/子任務序列驗證
 
-- **Logical order**: Do tasks follow proper implementation sequence?
-- **Dependencies**: Are task dependencies clear and correct?
-- **Granularity**: Are tasks appropriately sized and actionable?
-- **Completeness**: Do tasks cover all requirements and acceptance criteria?
-- **Blocking issues**: Are there any tasks that would block others?
+- **邏輯順序**：任務是否遵循適當的實施序列？
+- **依賴關係**：任務依賴關係是否清楚且正確？
+- **粒度**：任務是否適當調整大小且可執行？
+- **完整性**：任務是否涵蓋所有需求和驗收標準？
+- **阻塞問題**：是否有會阻塞其他任務的任務？
 
-### 8. Anti-Hallucination Verification
+### 8. 反幻覺驗證
 
-- **Source verification**: Every technical claim must be traceable to source documents
-- **Architecture alignment**: Dev Notes content matches architecture specifications
-- **No invented details**: Flag any technical decisions not supported by source documents
-- **Reference accuracy**: Verify all source references are correct and accessible
-- **Fact checking**: Cross-reference claims against epic and architecture documents
+- **來源驗證**：每個技術聲明都必須可追溯到來源文件
+- **架構對齊**：Dev Notes 內容與架構規格匹配
+- **無發明細節**：標記任何不受來源文件支持的技術決策
+- **參考準確性**：驗證所有來源參考都正確且可訪問
+- **事實檢查**：對照史詩和架構文件交叉參考聲明
 
-### 9. Dev Agent Implementation Readiness
+### 9. Dev Agent 實施準備就緒
 
-- **Self-contained context**: Can the story be implemented without reading external docs?
-- **Clear instructions**: Are implementation steps unambiguous?
-- **Complete technical context**: Are all required technical details present in Dev Notes?
-- **Missing information**: Identify any critical information gaps
-- **Actionability**: Are all tasks actionable by a development agent?
+- **自包含上下文**：故事是否可以在不閱讀外部文件的情況下實施？
+- **清楚說明**：實施步驟是否明確？
+- **完整技術上下文**：Dev Notes 中是否存在所有必需的技術細節？
+- **缺少資訊**：識別任何關鍵資訊差距
+- **可執行性**：所有任務是否都可以由開發代理執行？
 
-### 10. Generate Validation Report
+### 10. 產生驗證報告
 
-Provide a structured validation report including:
+提供結構化驗證報告，包括：
 
-#### Template Compliance Issues
+#### 範本合規問題
 
-- Missing sections from story template
-- Unfilled placeholders or template variables
-- Structural formatting issues
+- 故事範本中缺少的部分
+- 未填充的佔位符或範本變數
+- 結構格式問題
 
-#### Critical Issues (Must Fix - Story Blocked)
+#### 關鍵問題（必須修復 - 故事被阻塞）
 
-- Missing essential information for implementation
-- Inaccurate or unverifiable technical claims
-- Incomplete acceptance criteria coverage
-- Missing required sections
+- 實施缺少必要資訊
+- 不準確或不可驗證的技術聲明
+- 不完整的驗收標準覆蓋
+- 缺少必需部分
 
-#### Should-Fix Issues (Important Quality Improvements)
+#### 應修復問題（重要品質改進）
 
-- Unclear implementation guidance
-- Missing security considerations
-- Task sequencing problems
-- Incomplete testing instructions
+- 不清楚的實施指導
+- 缺少安全考慮
+- 任務排序問題
+- 不完整的測試說明
 
-#### Nice-to-Have Improvements (Optional Enhancements)
+#### 良好改進（可選增強）
 
-- Additional context that would help implementation
-- Clarifications that would improve efficiency
-- Documentation improvements
+- 有助於實施的額外上下文
+- 提高效率的澄清
+- 文件改進
 
-#### Anti-Hallucination Findings
+#### 反幻覺發現
 
-- Unverifiable technical claims
-- Missing source references
-- Inconsistencies with architecture documents
-- Invented libraries, patterns, or standards
+- 不可驗證的技術聲明
+- 缺少來源參考
+- 與架構文件的不一致
+- 發明的庫、模式或標準
 
-#### Final Assessment
+#### 最終評估
 
-- **GO**: Story is ready for implementation
-- **NO-GO**: Story requires fixes before implementation
-- **Implementation Readiness Score**: 1-10 scale
-- **Confidence Level**: High/Medium/Low for successful implementation
+- **GO**：故事準備實施
+- **NO-GO**：故事需要修復才能實施
+- **實施準備分數**：1-10 分制
+- **信心水平**：高/中/低成功實施

@@ -1,119 +1,119 @@
 <!-- Powered by BMAD™ Core -->
 
-# Advanced Elicitation Task
+# 進階引出任務
 
-## Purpose
+## 目的
 
-- Provide optional reflective and brainstorming actions to enhance content quality
-- Enable deeper exploration of ideas through structured elicitation techniques
-- Support iterative refinement through multiple analytical perspectives
-- Usable during template-driven document creation or any chat conversation
+- 提供可選的反思和腦力激盪行動來增強內容品質
+- 通過結構化引出技術實現對想法的更深入探索
+- 通過多個分析角度支持反覆完善
+- 可用於範本驅動的文件創建或任何聊天對話
 
-## Usage Scenarios
+## 使用場景
 
-### Scenario 1: Template Document Creation
+### 場景 1：範本文件創建
 
-After outputting a section during document creation:
+在文件創建期間輸出一個部分後：
 
-1. **Section Review**: Ask user to review the drafted section
-2. **Offer Elicitation**: Present 9 carefully selected elicitation methods
-3. **Simple Selection**: User types a number (0-8) to engage method, or 9 to proceed
-4. **Execute & Loop**: Apply selected method, then re-offer choices until user proceeds
+1. **部分檢視**：要求用戶檢視草稿部分
+2. **提供引出**：呈現 9 個精心選擇的引出方法
+3. **簡單選擇**：用戶輸入數字（0-8）來參與方法，或 9 繼續
+4. **執行與循環**：應用選定的方法，然後重新提供選擇直到用戶繼續
 
-### Scenario 2: General Chat Elicitation
+### 場景 2：一般聊天引出
 
-User can request advanced elicitation on any agent output:
+用戶可以對任何代理輸出請求進階引出：
 
-- User says "do advanced elicitation" or similar
-- Agent selects 9 relevant methods for the context
-- Same simple 0-9 selection process
+- 用戶說「做進階引出」或類似的
+- 代理為上下文選擇 9 個相關方法
+- 相同的簡單 0-9 選擇過程
 
-## Task Instructions
+## 任務說明
 
-### 1. Intelligent Method Selection
+### 1. 智能方法選擇
 
-**Context Analysis**: Before presenting options, analyze:
+**上下文分析**：在呈現選項之前，分析：
 
-- **Content Type**: Technical specs, user stories, architecture, requirements, etc.
-- **Complexity Level**: Simple, moderate, or complex content
-- **Stakeholder Needs**: Who will use this information
-- **Risk Level**: High-impact decisions vs routine items
-- **Creative Potential**: Opportunities for innovation or alternatives
+- **內容類型**：技術規格、用戶故事、架構、需求等
+- **複雜度級別**：簡單、中等或複雜內容
+- **利益相關者需求**：誰將使用此資訊
+- **風險級別**：高影響決策 vs 例行項目
+- **創意潛力**：創新或替代方案的機會
 
-**Method Selection Strategy**:
+**方法選擇策略**：
 
-1. **Always Include Core Methods** (choose 3-4):
-   - Expand or Contract for Audience
-   - Critique and Refine
-   - Identify Potential Risks
-   - Assess Alignment with Goals
+1. **始終包含核心方法**（選擇 3-4 個）：
+   - 為受眾擴展或收縮
+   - 批評和完善
+   - 識別潛在風險
+   - 評估與目標的一致性
 
-2. **Context-Specific Methods** (choose 4-5):
-   - **Technical Content**: Tree of Thoughts, ReWOO, Meta-Prompting
-   - **User-Facing Content**: Agile Team Perspective, Stakeholder Roundtable
-   - **Creative Content**: Innovation Tournament, Escape Room Challenge
-   - **Strategic Content**: Red Team vs Blue Team, Hindsight Reflection
+2. **上下文特定方法**（選擇 4-5 個）：
+   - **技術內容**：思想樹、ReWOO、元提示
+   - **面向用戶的內容**：敏捷團隊視角、利益相關者圓桌會議
+   - **創意內容**：創新錦標賽、密室逃脫挑戰
+   - **戰略內容**：紅隊 vs 藍隊、後見之明反思
 
-3. **Always Include**: "Proceed / No Further Actions" as option 9
+3. **始終包含**：「繼續 / 無進一步行動」作為選項 9
 
-### 2. Section Context and Review
+### 2. 部分上下文和檢視
 
-When invoked after outputting a section:
+在輸出一個部分後被調用時：
 
-1. **Provide Context Summary**: Give a brief 1-2 sentence summary of what the user should look for in the section just presented
+1. **提供上下文摘要**：簡要 1-2 句摘要，說明用戶應該在剛呈現的部分中尋找什麼
 
-2. **Explain Visual Elements**: If the section contains diagrams, explain them briefly before offering elicitation options
+2. **解釋視覺元素**：如果部分包含圖表，在提供引出選項之前簡要解釋它們
 
-3. **Clarify Scope Options**: If the section contains multiple distinct items, inform the user they can apply elicitation actions to:
-   - The entire section as a whole
-   - Individual items within the section (specify which item when selecting an action)
+3. **澄清範圍選項**：如果部分包含多個不同項目，告知用戶他們可以將引出行動應用於：
+   - 整個部分作為整體
+   - 部分內的個別項目（選擇行動時指定哪個項目）
 
-### 3. Present Elicitation Options
+### 3. 呈現引出選項
 
-**Review Request Process:**
+**檢視請求過程：**
 
-- Ask the user to review the drafted section
-- In the SAME message, inform them they can suggest direct changes OR select an elicitation method
-- Present 9 intelligently selected methods (0-8) plus "Proceed" (9)
-- Keep descriptions short - just the method name
-- Await simple numeric selection
+- 要求用戶檢視草稿部分
+- 在同一訊息中，告知他們可以建議直接變更或選擇引出方法
+- 呈現 9 個智能選擇的方法（0-8）加上「繼續」（9）
+- 保持描述簡短 - 僅方法名稱
+- 等待簡單的數字選擇
 
-**Action List Presentation Format:**
+**行動列表呈現格式：**
 
 ```text
-**Advanced Elicitation Options**
-Choose a number (0-8) or 9 to proceed:
+**進階引出選項**
+選擇一個數字（0-8）或 9 繼續：
 
-0. [Method Name]
-1. [Method Name]
-2. [Method Name]
-3. [Method Name]
-4. [Method Name]
-5. [Method Name]
-6. [Method Name]
-7. [Method Name]
-8. [Method Name]
-9. Proceed / No Further Actions
+0. [方法名稱]
+1. [方法名稱]
+2. [方法名稱]
+3. [方法名稱]
+4. [方法名稱]
+5. [方法名稱]
+6. [方法名稱]
+7. [方法名稱]
+8. [方法名稱]
+9. 繼續 / 無進一步行動
 ```
 
-**Response Handling:**
+**回應處理：**
 
-- **Numbers 0-8**: Execute the selected method, then re-offer the choice
-- **Number 9**: Proceed to next section or continue conversation
-- **Direct Feedback**: Apply user's suggested changes and continue
+- **數字 0-8**：執行選定的方法，然後重新提供選擇
+- **數字 9**：繼續到下一部分或繼續對話
+- **直接反饋**：應用用戶建議的變更並繼續
 
-### 4. Method Execution Framework
+### 4. 方法執行框架
 
-**Execution Process:**
+**執行過程：**
 
-1. **Retrieve Method**: Access the specific elicitation method from the elicitation-methods data file
-2. **Apply Context**: Execute the method from your current role's perspective
-3. **Provide Results**: Deliver insights, critiques, or alternatives relevant to the content
-4. **Re-offer Choice**: Present the same 9 options again until user selects 9 or gives direct feedback
+1. **檢索方法**：從引出方法數據檔案中訪問特定的引出方法
+2. **應用上下文**：從您當前角色的角度執行方法
+3. **提供結果**：交付與內容相關的見解、批評或替代方案
+4. **重新提供選擇**：再次呈現相同的 9 個選項，直到用戶選擇 9 或給出直接反饋
 
-**Execution Guidelines:**
+**執行指南：**
 
-- **Be Concise**: Focus on actionable insights, not lengthy explanations
-- **Stay Relevant**: Tie all elicitation back to the specific content being analyzed
-- **Identify Personas**: For multi-persona methods, clearly identify which viewpoint is speaking
-- **Maintain Flow**: Keep the process moving efficiently
+- **簡潔**：專注於可執行的見解，而不是冗長的解釋
+- **保持相關**：將所有引出都與正在分析的特定內容聯繫起來
+- **識別角色**：對於多角色方法，清楚識別哪個觀點在說話
+- **維持流程**：保持過程高效進行
