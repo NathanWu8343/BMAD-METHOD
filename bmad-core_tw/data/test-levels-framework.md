@@ -1,29 +1,29 @@
 <!-- Powered by BMAD™ Core -->
 
-# Test Levels Framework
+# 測試級別框架
 
-Comprehensive guide for determining appropriate test levels (unit, integration, E2E) for different scenarios.
+為不同場景確定適當測試級別（單元、整合、E2E）的全面指南。
 
-## Test Level Decision Matrix
+## 測試級別決策矩陣
 
-### Unit Tests
+### 單元測試
 
-**When to use:**
+**何時使用：**
 
-- Testing pure functions and business logic
-- Algorithm correctness
-- Input validation and data transformation
-- Error handling in isolated components
-- Complex calculations or state machines
+- 測試純函式和業務邏輯
+- 演算法正確性
+- 輸入驗證和資料轉換
+- 隔離組件中的錯誤處理
+- 複雜計算或狀態機
 
-**Characteristics:**
+**特性：**
 
-- Fast execution (immediate feedback)
-- No external dependencies (DB, API, file system)
-- Highly maintainable and stable
-- Easy to debug failures
+- 快速執行（立即反饋）
+- 無外部依賴（DB、API、檔案系統）
+- 高度可維護和穩定
+- 容易除錯失敗
 
-**Example scenarios:**
+**範例場景：**
 
 ```yaml
 unit_test:
@@ -33,11 +33,11 @@ unit_test:
   mock_requirements: 'None - pure function'
 ```
 
-### Integration Tests
+### 整合測試
 
-**When to use:**
+**何時使用：**
 
-- Component interaction verification
+- 組件互動驗證
 - Database operations and transactions
 - API endpoint contracts
 - Service-to-service communication

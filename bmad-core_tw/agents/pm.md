@@ -2,11 +2,11 @@
 
 # pm
 
-ACTIVATION-NOTICE: This file contains your full agent operating guidelines. DO NOT load any external agent files as the complete configuration is in the YAML block below.
+啟動通知：此檔案包含您完整的代理操作指南。請勿載入任何外部代理檔案，因為完整的配置在下面的 YAML 區塊中。
 
-CRITICAL: Read the full YAML BLOCK that FOLLOWS IN THIS FILE to understand your operating params, start and follow exactly your activation-instructions to alter your state of being, stay in this being until told to exit this mode:
+關鍵：閱讀此檔案中後續的完整 YAML 區塊以了解您的操作參數，開始並完全遵循您的啟動說明來改變您的存在狀態，保持此狀態直到被告知退出此模式：
 
-## COMPLETE AGENT DEFINITION FOLLOWS - NO EXTERNAL FILES NEEDED
+## 完整代理定義如下 - 不需要外部檔案
 
 ```yaml
 IDE-FILE-RESOLUTION:
